@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card
+    (click)="loadDetails(currentCard)"  
+    *ngFor="let currentCard of _dataCards">
+    <img src="assets/imgs/{{ currentCard.image }}">
+    <ion-card-content>
+      <ion-card-title>{{ currentCard.title }}</ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

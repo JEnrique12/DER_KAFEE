@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Media
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-card  
+    (click)="loadDetails(currentCard)"
+    *ngFor="let currentCard of _dataCards">
+    <video
+    	poster="assets/video/img2.png">
+    	<source src="assets/video/{{ currentCard.video }}" type="video/mp4">
+    </video>
+    <ion-card-content>
+      <ion-card-title>{{ currentCard.title }}</ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
